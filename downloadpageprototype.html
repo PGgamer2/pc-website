@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<title>Download (WIP) - SM64 PC Port</title>
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url(img/bg.png); background-size: 255px;">
+	<div>
+		<div class="center" style="display: flex;">
+			<div class="dlsect"><br>
+				<a style="font-size: 175%;">Evol's original repo</a>
+				<br><div style="margin-top: 70px;">
+					<img src="img/discord.png" onclick="window.open('https://discord.gg/ZezK78p');" style="width: 80px; cursor: url(img/cursorpointer.png), auto;"></img><a style="display: inline-block; font-size: 125%; transform: translate(0, -32px);">&ensp;Discord</a>
+					<br><img src="img/download.png" onclick="window.open('https://cdn.discordapp.com/attachments/712521572715462657/721896007222165544/build-setup.sh');" style="width: 75px; cursor: url(img/cursorpointer.png), auto;"></img><a style="display: inline-block; font-size: 125%; transform: translate(0, -32px);">&ensp;Download</a>
+				</div>
+			</div>
+			<div class="dlsect"><br>
+				<a style="font-size: 175%;">Brine's Github Fork</a>
+				<br><div style="margin-top: 70px;">
+					<img src="img/discord.png" onclick="window.open('https://discord.gg/kXtdPfP');" style="width: 80px; cursor: url(img/cursorpointer.png), auto;"></img><a style="display: inline-block; font-size: 125%; transform: translate(0, -32px);">&ensp;Discord</a>
+					<br><img src="img/download.png" onclick="window.open('https://www.reddit.com/user/BrineDude_Gaming/comments/h7gjz6/super_mario_64_pc_windows_guide/');" style="width: 75px; cursor: url(img/cursorpointer.png), auto;"></img>
+					<br><a style="display: inline-block; font-size: 125%;">Guide and download</a>
+				</div>
+			</div>
+			<div class="dlsect"><br>
+				<a style="font-size: 175%;">Source code repo</a>
+				<br><div style="margin-top: 100px;">
+					<br><img src="img/download.png" onclick="window.open('https://github.com/sm64pc/sm64pc');" style="width: 75px; cursor: url(img/cursorpointer.png), auto;"></img>
+					<br><a style="display: inline-block; font-size: 125%;">Download</a>
+				</div>
+			</div>
+			<div class="contxt" style="margin: 90px auto;">
+				<br><a>Attention!<br>
+					This project uses reverse engineering on the original N64 game,<br>
+					so don't share the compiled version of the port.<br>
+					(SM64 ROM not included in the download)
+					<br>If you want some help or ask something, go in the discord servers or in the official <span style="cursor: url(img/cursorpointer.png), auto; text-decoration: underline;" onclick="window.open('https://sm64pc.info/');">forum</span> (not working).
+				</a><br>
+				<br><a id="lcm"></a><br><a id="lcn"></a>
+			</div>
+		</div>
+	</div>
+	<script src="getLastCommits.js"></script>
+	<script>
+	var sw = window.innerWidth
+	|| document.documentElement.clientWidth
+	|| document.body.clientWidth;
+	if (sw <= 1072) {
+		var alldlrect = document.getElementsByClassName('dlsect');
+		for (var i = 0; i < alldlrect.length; i++) {
+			alldlrect[i].style.transform = "translate(0, 50px)";
+		}
+		console.log("Some objects are been translated for better device support.");
+	}
+	</script>
+</body>
