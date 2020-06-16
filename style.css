@@ -88,7 +88,8 @@ img {
 	min-width: 230px;
 	width: 28vw;
 	height: 400px;
-	background: rgb(210,169,0,0.5);
+	background-color: #d2a900;
+	background-color: rgba(210,169,0,0.6);
 	margin: 6px;
 	border-radius: 10px;
 }
