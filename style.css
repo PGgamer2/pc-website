@@ -1,10 +1,10 @@
 body { background-color: #d2a922; }
 @font-face {
-  font-family: mario64;
-  src: url(font.ttf);
+  font-family: 'mario64';
+  src: url('font.ttf') format('truetype');
 }
 * {
-	font-family: mario64;
+	font-family: 'mario64';
 	color: white;
 	cursor: url(img/cursornormal.png), auto;	
 }
@@ -92,4 +92,11 @@ img {
 	background-color: rgba(210,169,0,0.6);
 	margin: 6px;
 	border-radius: 10px;
+}
+.wikibtn {
+	color: black;
+	font-size: 105%;
+	margin-top: 8px;
+	cursor: pointer;
+	cursor: url(img/cursorpointer.png), auto;
 }
