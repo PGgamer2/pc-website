@@ -85,10 +85,10 @@ img {
 }
 .dlsect {
 	text-align: center;
-	min-width: 240px;
+	min-width: 230px;
 	width: 28vw;
 	height: 400px;
 	background: rgb(210,169,0,0.5);
-	margin: 8px;
+	margin: 6px;
 	border-radius: 10px;
 }
