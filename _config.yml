@@ -21,7 +21,7 @@
 title: SM64PC
 description: SM64PC Port Site
 url: "http://sm64pcport.tk"
-markdown: CommonMarkGhPages
+markdown: gfm
 
 # Build settings
 theme: minima
