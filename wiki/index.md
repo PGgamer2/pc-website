@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<pre>
 <head>
-	<title>Compile on Windows - SM64 PC Port</title>
+	<title>Wiki - SM64 PC Port</title>
 	<link rel="icon" href="../favicon.ico">
 	<link rel="stylesheet" href="../style.css">
 </head>
@@ -13,8 +13,13 @@
 			<a style="font-size: 120%;">Wiki pages:</a>
 		</div>
 		<div style="display: block; margin: 10px auto; text-align: center;">
-			# Compile on Windows
+</pre>
+**Wiki page test**
+---
+Welcome to the wiki! ATTENTION: it's still W.I.P.
+<pre>
 		</div>
 	</div>
 	<script src="script.js"></script>
 </body>
+</pre>
