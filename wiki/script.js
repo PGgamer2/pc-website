@@ -1,10 +1,3 @@
-// Custom pointer cursor
-var pelms = document.getElementsByTagName("*");
-for (var i = 0; i < pelms.length; i++) {
-    if (window.getComputedStyle(pelms[i]).cursor == "pointer") {
-        pelms[i].style.cursor = "url(../img/cursorpointer.png)";
-    }
-}
 // Get pages in this folder and show them up
 var listDiv = document.getElementById("wikilist");
 var xmlhttpgp = new XMLHttpRequest();
