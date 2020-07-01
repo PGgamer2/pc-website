@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+	<title>Patches - SM64 Port</title>
+	<link rel="icon" href="../favicon.ico">
+	<meta property="og:title" content="SM64 Port Wiki" />
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+	<div style="display: flex;">
+		<div id="wikilist">
+			<!--List of wiki pages-->
+			<img src="../img/wiki.png" onclick="window.location.href = 'https://sm64pcport.tk/wiki/';" style="width: 80px; cursor: url(../img/cursorpointer.png), auto;"></img><br><br>
+			<a style="font-size: 120%;">Wiki pages:</a>
+		</div>
+		<div style="margin: 10px 15px;" id="mdtxt"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+document.getElementById('mdtxt').innerHTML = marked(`
+# Patches / Enhancements
+---
+[This directory](https://github.com/sm64-port/sm64-port/tree/master/enhancements) contains unofficial patches to the source code that provide various features and enhancements.
+To apply a patch, run 'tools/apply_patch.sh [patch]' where [patch] is the name of the .patch file you wish to apply. 
+This will perform all of the patch's changes to the source code.
+Likewise, to undo the changes from a patch you applied, run 'tools/revert_patch.sh' with the name of the .patch file you wish to undo.
+To create your own enhancement patch make your changes to the code (but do not commit to the GitHub repo), then run 'tools/create_patch.sh'. 
+Your changes will be stored in the .patch file you specify.
+`);
+	</script>
+	<script src="script.js"></script>
+</body>
