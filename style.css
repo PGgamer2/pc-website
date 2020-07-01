@@ -102,6 +102,7 @@ img {
 	color: black;
 	font-size: 105%;
 	margin-top: 8px;
+	min-width: 145px;
 	cursor: pointer;
 	cursor: url(img/cursorpointer.png), auto;
 }

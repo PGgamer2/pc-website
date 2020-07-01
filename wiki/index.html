@@ -12,14 +12,15 @@
 			<img src="../img/wiki.png" onclick="window.location.href = 'http://sm64pcport.tk/wiki/';" style="width: 80px; cursor: url(../img/cursorpointer.png), auto;"></img><br><br>
 			<a style="font-size: 120%;">Wiki pages:</a>
 		</div>
-		<div style="display: block; margin: 10px auto; text-align: center;" id="mdtxt">
-		</div>
+		<div style="margin: 10px auto; text-align: center;" id="mdtxt"></div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script>
 document.getElementById('mdtxt').innerHTML = marked(`
-# Wiki page test
-Welcome to the wiki! ATTENTION: it's still W.I.P.
+SM64 Port Wiki
+---
+Welcome to the wiki! ATTENTION: it's still W.I.P.\n
+Most of this wiki was copied from the [original repository's README.md file](https://github.com/sm64-port/sm64-port/blob/master/README.md).
 `);
 	</script>
 	<script src="script.js"></script>

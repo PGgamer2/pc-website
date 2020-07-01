@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Compile on MacOS - SM64 PC Port</title>
+	<link rel="icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+	<div style="display: flex;">
+		<div id="wikilist">
+			<!--List of wiki pages-->
+			<img src="../img/wiki.png" onclick="window.location.href = 'http://sm64pcport.tk/wiki/';" style="width: 80px; cursor: url(../img/cursorpointer.png), auto;"></img><br><br>
+			<a style="font-size: 120%;">Wiki pages:</a>
+		</div>
+		<div style="margin: 10px 15px;" id="mdtxt"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+document.getElementById('mdtxt').innerHTML = marked(`
+# Compile on MacOS
+---
+Installing Docker is the recommended avenue for macOS users. This project does not support macOS natively due to lack of macOS host support.
+
+## Docker Installation
+
+### Create Docker image
+
+Create the docker image with 'docker build -t sm64'.
+
+### Build
+
+To build, mount the local filesystem into the Docker container and build the ROM with 'docker run'.
+
+#### macOS example for (U):
+'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 sm64 make VERSION=us -j4'
+
+#### Linux example for (U):
+For a Linux host, Docker needs to be instructed which user should own the output files:
+'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 --user $UID:$UID sm64 make VERSION=us -j4'
+
+Resulting artifacts can be found in the 'build' directory.
+`);
+	</script>
+	<script src="script.js"></script>
+</body>

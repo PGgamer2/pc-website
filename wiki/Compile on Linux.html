@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<title>Compile on Linux - SM64 PC Port</title>
+	<link rel="icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+	<div style="display: flex;">
+		<div id="wikilist">
+			<!--List of wiki pages-->
+			<img src="../img/wiki.png" onclick="window.location.href = 'http://sm64pcport.tk/wiki/';" style="width: 80px; cursor: url(../img/cursorpointer.png), auto;"></img><br><br>
+			<a style="font-size: 120%;">Wiki pages:</a>
+		</div>
+		<div style="margin: 10px 15px;" id="mdtxt"></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+document.getElementById('mdtxt').innerHTML = marked(`
+# Compile on Linux
+---
+1. Install prerequisites (Ubuntu): 'sudo apt install -y git build-essential pkg-config libusb-1.0-0-dev libsdl2-dev'.
+2. Clone the repo: 'git clone https://github.com/sm64-port/sm64-port.git'.
+3. Place a Super Mario 64 ROM called 'baserom.VER.z64' into the project folder for asset extraction, where 'VER' can be 'us', 'jp', or 'eu'.
+4. Run 'make' to build. Qualify the version through 'make VERSION=VER'. Add '-j4' to improve build speed (hardware dependent based on the amount of CPU cores available).
+5. The executable binary will be located at 'build/VER_pc/sm64.VER.f3dex2e'.
+`);
+	</script>
+	<script src="script.js"></script>
+</body>
