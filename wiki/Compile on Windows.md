@@ -1,4 +1,4 @@
-<pre>
+<!DOCTYPE html>
 <head>
 	<title>Compile on Windows - SM64 PC Port</title>
 	<link rel="icon" href="../favicon.ico">
@@ -13,11 +13,8 @@
 			<a style="font-size: 120%;">Wiki pages:</a>
 		</div>
 		<div style="display: block; margin: 10px auto; text-align: center;">
-</pre>
 # Compile on Windows
-<pre>
 		</div>
 	</div>
 	<script src="script.js"></script>
 </body>
-</pre>
