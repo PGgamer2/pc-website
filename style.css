@@ -1,17 +1,24 @@
 body { background-color: #d2a922; }
 @font-face {
   font-family: 'mario64';
-  src: url('font.ttf') format('truetype');
+  src: url('mario64.ttf') format('truetype');
 }
-* {
-	font-family: 'mario64';
+@font-face {
+	font-family: 'VCROSD';
+	src: url('vcrosd.ttf') format('truetype');
+}
+* {cursor: url(img/cursornormal.png), auto; color: white;}
+.pwfont {
+	font-family: 'VCROSD';
 	color: white;
-	cursor: url(img/cursornormal.png), auto;	
+}
+.m64font {
+	font-family: 'mario64';
+	color: white;	
 }
 img {
+	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: crisp-edges;
 }
 .menustyle {
 	background-image: url(img/menu.png);
@@ -99,6 +106,7 @@ img {
 	border-radius: 10px;
 }
 .wikibtn {
+	font-family: mario64;
 	color: black;
 	font-size: 105%;
 	margin-top: 8px;
