@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>FAQ - SM64 Port</title>
+	<link rel="icon" href="../favicon.ico">
+	<meta property="og:title" content="SM64 Port Wiki" />
+	<link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="pwfont">
+	<div style="display: flex;">
+		<div id="wikilist" class="m64font">
+			<!--List of wiki pages-->
+			<img src="../img/wiki.png" onclick="window.location.href = 'https://sm64pcport.tk/wiki/';" style="width: 80px; cursor: url(../img/cursorpointer.png), auto;"></img><br><br>
+			<a style="font-size: 120%;">Wiki pages:</a>
+		</div>
+		<div style="margin: 10px 15px;" id="mdtxt"><noscript>Your browser does not support JavaScript!</noscript></div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	<script>
+document.getElementById('mdtxt').innerHTML = marked(`
+# FAQ
+---
+### What's the difference between the original repo and the fork repo?
+The fork repo ([sm64ex](https://github.com/sm64pc/sm64ex)) has [additional features](https://github.com/sm64pc/sm64ex/wiki/Build-options) compared to the original one.
+### Where can I find help in case of problems?
+You can go ask in one of the [Discord servers](../download.html) or in the [forum](https://sm64pc.info/).
+### How do I make the game fullscreen?
+Press left Alt + Enter or change it in the settings / config file.
+### Full screen doesn't seem like the right resolution
+Change high DPI settings by right clicking in the exe and then clicking on compatibility.
+### Will my controller work?
+Yes it should work automatically with an Xbox360, Xbox One, PS4, or other Xinput devices.<br>
+If your controller doesn't work in game but does work on Steam then you can add the game to Steam and launch it that way.
+<br>If that doesn't work either then use Joy2Key or DS4 Windows.
+### I compiled the game and my PC says that OpenGL is too old. What do I do?
+The fork repo ([sm64ex](https://github.com/sm64pc/sm64ex)) has a build option that can help you named [RENDER_API](https://github.com/sm64pc/sm64ex/wiki/Build-options).
+`);
+	</script>
+	<script src="script.js"></script>
+</body>
