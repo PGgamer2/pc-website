@@ -20,7 +20,7 @@
 document.getElementById('mdtxt').innerHTML = marked(`
 # Run the game on MacOS
 ---
-Installing Docker is the recommended avenue for macOS users. This project does not support macOS natively due to lack of macOS host support.
+Installing Docker is the recommended avenue for macOS users. ATTENTION: this project does not support macOS natively due to lack of macOS host support.
 
 ## Docker Installation
 
@@ -40,6 +40,10 @@ For a Linux host, Docker needs to be instructed which user should own the output
 'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 --user $UID:$UID sm64 make VERSION=us -j4'
 
 Resulting artifacts can be found in the 'build' directory.
+
+### Community tools
+  * [MacOS Semi-automatic build script](http://sm64pc.info/forum/viewtopic.php?f=4&t=14) (by droc101).
+  * [MacOS more detailed build guide](https://cdn.discordapp.com/attachments/711253314855108629/716206397783539772/macOSCompGuide.md) (by Din).
 `);
 	</script>
 	<script src="script.js"></script>
