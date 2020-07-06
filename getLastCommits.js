@@ -5,7 +5,7 @@ xmlhttplc.onreadystatechange = function() {
 		var SerJSONLC = JSON.parse(this.responseText);
 		for (var jsarrayn of SerJSONLC) {
 			if (jsarrayn.name == "master") {
-				document.getElementById("lcm").innerHTML = "Last commit: " + jsarrayn.commit.sha.substring(0, 7);
+				document.getElementById("lcm").innerHTML = "Last original repo commit: " + jsarrayn.commit.sha.substring(0, 7);
 				document.getElementById("lcm").href = "https://github.com/sm64-port/sm64-port/commit/" + jsarrayn.commit.sha;
 			}
 		}
