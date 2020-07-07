@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<title>Run on MacOS - SM64 Port</title>
+	<title>Build for MacOS - SM64 Port</title>
 	<link rel="icon" href="../favicon.ico">
 	<meta property="og:title" content="SM64 Port Wiki" />
 	<link rel="stylesheet" href="../style.css">
@@ -18,28 +18,31 @@
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script>
 document.getElementById('mdtxt').innerHTML = marked(`
-# Run the game on MacOS
+# Build the game for MacOS
 ---
-Installing Docker is the recommended avenue for macOS users. ATTENTION: this project does not support macOS natively due to lack of macOS host support.
+## Install [Homebrew](http://brew.sh/):
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-## Docker Installation
+## Install required packages:
+* For macOS Mojave (10.14) & below: brew install make gcc mingw-w64 pkg-config sdl2 glew libusb python3 git
+* For macOS Catalina (10.15) & above: brew install make gcc mingw-w64 pkg-config sdl2 glew libusb git
 
-### Create Docker image
+## Clone this git fork:
+git clone https://github.com/zoltar007/target_osx
 
-Create the docker image with 'docker build -t sm64'.
+## Copy your Super Mario 64 USA ROM into the cloned repository directory:
+cp baserom.us.z64 target_osx/
 
-### Build
+## Switch to the cloned repository directory:
+cd target_osx
 
-To build, mount the local filesystem into the Docker container and build the ROM with 'docker run'.
+## Compile the PC port binary:
+make or make -j You can also use make TARGET_OSX=1 if you want to be specific.
 
-#### macOS example for (U):
-'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 sm64 make VERSION=us -j4'
+## Switch to the build directory:
+cd build/us_pc
 
-#### Linux example for (U):
-For a Linux host, Docker needs to be instructed which user should own the output files:
-'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 --user $UID:$UID sm64 make VERSION=us -j4'
-
-Resulting artifacts can be found in the 'build' directory.
+Now you can run the PC port binary at ./sm64.us.f3dex2e
 
 ### Community tools
   * [MacOS Semi-automatic build script](http://sm64pc.info/forum/viewtopic.php?f=4&t=14) (by droc101).

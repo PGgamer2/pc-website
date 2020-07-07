@@ -26,9 +26,11 @@ The full list of configurable variables are listed below, with the default being
 * 'VERSION': us, jp, eu, sh (WIP)
 * 'GRUCODE': f3d_old, f3d_new, f3dex, f3dex2, f3dzex
 * 'COMPARE': 1 (compare ROM hash), 0 (do not compare ROM hash)
-* 'NON_MATCHING': Use functionally equivalent C implementations for non-matchings. Also will avoid instances of undefined behavior.
+* 'NON_MATCHING': 0, 1. Use functionally equivalent C implementations for non-matchings. Also will avoid instances of undefined behavior.
 * 'CROSS': Cross-compiler tool prefix (Example: mips64-elf-).
 * 'QEMU_IRIX': Path to a qemu-irix binary.
+* 'TARGET_WEB': 0 (default), 1 (compile for [Emscripten](https://emscripten.org)/WebGL)
+* 'COMPILER': ido, gcc. (Compiler to use)
 * 'TARGET_N64': 0. If set to one, will build an N64 ROM. An unmodified repository will produce one of the following ROMs depending on what version is set to:
   * sm64.jp.z64 'sha1: 8a20a5c83d6ceb0f0506cfc9fa20d8f438cafe51'
   * sm64.us.z64 'sha1: 9bef1128717f958171a4afac3ed78ee2bb4e86ce'
