@@ -21,7 +21,6 @@
 title: SM64-Port
 description: SM64 Port Site
 url: "http://sm64pcport.tk"
-markdown: gfm
 
 # Build settings
 plugins:
