@@ -1,4 +1,4 @@
-body { background-color: #d2a922; }
+body { background-color: #b3901d; background-image: url(img/gradient.png); }
 @font-face {
   font-family: 'mario64';
   src: url('mario64.ttf') format('truetype');
@@ -31,7 +31,7 @@ img {
 	height: 494px;
 	margin: 0 auto;
 	position: relative;
-	box-shadow: inset 0px 0px 8px 8px #d2a922;
+	box-shadow: inset 0px 0px 8px 8px #cea622;
 }
 .center {
   margin: 0;
