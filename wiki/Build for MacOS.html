@@ -20,32 +20,52 @@
 document.getElementById('mdtxt').innerHTML = marked(`
 # Build the game for MacOS
 ---
-## Install [Homebrew](http://brew.sh/):
+ATTENTION! This project does not support macOS natively due to lack of macOS host support.
+## Using Docker:
+
+### Docker Installation
+#### Create Docker image
+Create the docker image with 'docker build -t sm64'.
+
+#### Build
+To build, mount the local filesystem into the Docker container and build the ROM with 'docker run'.
+
+##### macOS example for (U):
+'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 sm64 make VERSION=us -j4'
+
+##### Linux example for (U):
+For a Linux host, Docker needs to be instructed which user should own the output files:
+'docker run --rm --mount type=bind,source="$(pwd)",destination=/sm64 --user $UID:$UID sm64 make VERSION=us -j4'
+
+Resulting artifacts can be found in the 'build' directory.
+
+## Using another fork:
+### Install [Homebrew](http://brew.sh/):
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-## Install required packages:
+### Install required packages:
 * For macOS Mojave (10.14) & below: brew install make gcc mingw-w64 pkg-config sdl2 glew libusb python3 git
 * For macOS Catalina (10.15) & above: brew install make gcc mingw-w64 pkg-config sdl2 glew libusb git
 
-## Clone this git fork:
+### Clone this git fork:
 git clone https://github.com/zoltar007/target_osx
 
-## Copy your Super Mario 64 USA ROM into the cloned repository directory:
+### Copy your Super Mario 64 USA ROM into the cloned repository directory:
 cp baserom.us.z64 target_osx/
 
-## Switch to the cloned repository directory:
+### Switch to the cloned repository directory:
 cd target_osx
 
-## Compile the PC port binary:
+### Compile the PC port binary:
 make or make -j
 <br>You can also use make TARGET_OSX=1 if you want to be specific.
 
-## Switch to the build directory:
+### Switch to the build directory:
 cd build/us_pc
 
 Now you can run the PC port binary at ./sm64.us.f3dex2e
 
-### Community tools
+## Community tools
   * [MacOS Semi-automatic build script](http://sm64pc.info/forum/viewtopic.php?f=4&t=14) (by droc101).
   * [MacOS detailed build guide](https://cdn.discordapp.com/attachments/711253314855108629/716206397783539772/macOSCompGuide.md) (by Din).
 `);
