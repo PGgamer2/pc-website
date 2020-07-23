@@ -18,6 +18,9 @@ body { background-color: #b3901d; background-image: url(img/gradient.png); }
 }
 img {
 	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
 	image-rendering: pixelated;
 }
 .menustyle {
@@ -39,12 +42,18 @@ img {
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .logo {
 	width: 288px;
 	height: 162px;
 	-ms-transform: translate(0, -27%);
+	-moz-transform: translate(0, -27%);
+	-webkit-transform: translate(0, -27%);
+	-o-transform: translate(0, -27%);
 	transform: translate(0, -27%);
 }
 .newbtnstyle {
