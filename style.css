@@ -62,8 +62,8 @@ img, button {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,0);
-	width: 280px;
-	height: 82px;
+	width: 20em;
+	height: 6em;
 	cursor: pointer;
 	cursor: url(img/cursorpointer.png), auto;
 	border: 0;
