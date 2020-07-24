@@ -16,7 +16,7 @@ body { background-color: #b3901d; background-image: url(img/gradient.png); }
 	font-family: 'mario64';
 	color: white;	
 }
-img {
+img, button {
 	-ms-interpolation-mode: nearest-neighbor;
 	image-rendering: -webkit-optimize-contrast;
     image-rendering: -moz-crisp-edges;
@@ -62,7 +62,7 @@ img {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,0);
-	width: 109px;
+	width: 280px;
 	height: 82px;
 	cursor: pointer;
 	cursor: url(img/cursorpointer.png), auto;
