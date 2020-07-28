@@ -7,22 +7,49 @@
 </head>
 
 <body class="m64font">
-	<div class="contxt">
+	<div class="contxt" id="404page">
 		<h1>Error 404</h1>
 		<a style="font-size: 115%;">Oops, we didn't find the page you were searching!<br>Return to the home page by clicking
 		<span style="cursor: pointer; text-decoration: underline; cursor: url(/img/cursorpointer.png), auto;" onclick="window.location.href = '/index.html';">here</span></a>
 		<br><br><br><img src="/img/oof.png" onclick="EGG();"></img>
 	</div>
+	<video id="wario" style="display: none; pointer-events: none;" src="/img/WARIOSHOWYOUFUN.mp4" />
 	<script>
 	var audio = new Audio('/mario_doh.wav');
 	var eggn = 0;
 	function EGG()
 	{
 		eggn += 1;
-		if (eggn == 3)
+		if (eggn == 3 || eggn == 6 || eggn == 9)
 		{
 			audio.play();
-			eggn = 0;
+		}
+		else if (eggn == 12)
+		{
+			document.getElementById("404page").style.display = "none";
+			var wario = document.getElementById("wario");
+			wario.style.display = "block";
+			wario.style.minHeight = "100%";
+			wario.style.minWidth = "100%";
+			wario.style.width = "auto";
+			wario.style.height = "auto";
+			wario.style.right = "0";
+			wario.style.bottom = "0";
+			wario.style.position = "fixed";
+			wario.controls = false;
+			if (wario.requestFullscreen) {
+				wario.requestFullscreen();
+			} else if (wario.mozRequestFullScreen) {
+				wario.mozRequestFullScreen();
+			} else if (wario.webkitRequestFullscreen) {
+				wario.webkitRequestFullscreen();
+			} else if (wario.msRequestFullscreen) { 
+				wario.msRequestFullscreen();
+			}
+			wario.play();
+			wario.onended = function() {
+				window.location.href = '/index.html';
+			}
 		}
 	}
 	</script>
