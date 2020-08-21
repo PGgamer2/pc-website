@@ -1,4 +1,4 @@
-// Get last commits of the branches
+// Get latest commit of the original repo
 var xmlhttplc = new XMLHttpRequest();
 xmlhttplc.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
