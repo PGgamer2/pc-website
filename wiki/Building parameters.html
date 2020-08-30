@@ -36,6 +36,28 @@ The full list of configurable variables are listed below, with the default being
   * sm64.jp.z64 'sha1: 8a20a5c83d6ceb0f0506cfc9fa20d8f438cafe51'
   * sm64.us.z64 'sha1: 9bef1128717f958171a4afac3ed78ee2bb4e86ce'
   * sm64.eu.z64 'sha1: 4ac5721683d0e0b6bbb561b58a71740845dceea9'
+
+---
+## SM64EX Only
+You can also find EX building parameters [here](https://github.com/sm64pc/sm64ex/wiki/Build-options).
+
+* 'TARGET_BITS': 32, 64. TARGET_BITS=n appends some compiler flags for an n-bit build. If the value is empty, the option does nothing, assuming your native toolchain will set everything up by itself. Use this only if you're having trouble otherwise.
+* 'TARGET_RPI': 0, 1. If 1, select optimal settings for Raspberry PI hardware. See the [main article](https://github.com/sm64pc/sm64ex/wiki/Helper-compiling-script-for-Raspberry-Pi) on that.
+* 'WINDOWS_BUILD': 0, 1. If 1, build for Windows. Usually set automatically if building on Windows.
+* 'OSX_BUILD': 0, 1. If 1, build for OSX.
+* 'WINDOWS_CONSOLE': 0, 1. If 1, append -mconsole to Windows CFLAGS, making a console window appear while the game is running. Can be useful for debugging purposes.
+* 'DEBUG': 0, 1. If 1, build with debug symbols and default optimization level. Otherwise build with -O2.
+* 'RENDER_API': GL, GL_LEGACY, D3D11, D3D12. Select rendering backend to use. GL corresponds to OpenGL 2.1 (gfx_opengl.c), GL_LEGACY corresponds to OpenGL 1.3 (gfx_opengl_legacy.c). Direct3D backends will also force WINDOW_API to DXGI.
+* 'WINDOW_API': SDL2, SDL1, DXGI. Select windowing backend. GL renderers force SDL1 or SDL2 and D3D renderers force DXGI for now, so you don't need to specify this.
+* 'AUDIO_API': SDL2, SDL1. Select audio backend. Keep in mind that you CANNOT mix SDL1 and SDL2.
+* 'CONTROLLER_API': SDL2. Specify list of controller backends to use. There's only one right now. Keep in mind that you CANNOT mix SDL1 and SDL2.
+* 'BETTERCAMERA': 0, 1. If 1, build with analog camera support (uses Puppycam).
+* 'NODRAWINGDISTANCE': 0, 1. If 1, build with disabled draw distance (every object is active at all times). May affect gameplay.
+* 'TEXTURE_FIX': 0, 1. If 1, enable various texture-related bugfixes (e.g. fixes the smoke texture).
+* 'EXT_OPTIONS_MENU': 1, 0. If 1, enable Options menu. Accessed from the Pause menu by pressing R.
+* 'EXTERNAL_DATA': 0, 1. If 1, load textures and soundbanks from external files. Allows you to use texture packs. The default data is copied to a res folder next to the produced executable.
+* 'DISCORDRPC': 0, 1. If 1, enable Discord Rich Presence support. Only works on x86_64.
+* 'TEXTSAVES': 0, 1. If 1, use INI-based save format instead of binary EEPROM dumps. Experimental.
 `);
 	</script>
 	<script src="script.js"></script>
