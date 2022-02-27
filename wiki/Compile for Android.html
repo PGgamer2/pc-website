@@ -18,7 +18,7 @@
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script>
-document.getElementById('mdtxt').innerHTML = marked(`
+document.getElementById('mdtxt').innerHTML = marked.parse(`
 # Compile for Android
 ---
 You can download the port [here](https://github.com/VDavid003/sm64-port-android-base).
@@ -55,7 +55,6 @@ Then open the command prompt and run 'gradlew.bat assembleDebug'
 - And then run 'docker run --rm -v $(pwd):/sm64 sm64_android sh -c "./gradlew assembleDebug"'
 
 You'll find the apk in the app/build/outputs/apk/debug/ directory
-
 `);
 	</script>
 	<script src="script.js"></script>
