@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <head>
 	<title>Oops - SM64 Port</title>
-	<link rel="icon" href="/favicon.ico">
+	<link rel="icon" href="/pc-website/favicon.ico">
 	<meta property="og:title" content="SM64 Port" />
-	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/pc-website/style.css">
 </head>
 
 <body class="m64font">
 	<div class="contxt" id="404page">
 		<h1>Error 404</h1>
 		<a style="font-size: 115%;">Oops, we didn't find the page you were searching!<br>Return to the home page by clicking
-		<span style="cursor: pointer; text-decoration: underline; cursor: url(/img/cursorpointer.png), auto;" onclick="window.location.href = '/index.html';">here</span></a>
-		<br><br><br><img src="/img/oof.png" onclick="EGG();"></img>
+		<span style="cursor: pointer; text-decoration: underline; cursor: url(/pc-website/img/cursorpointer.png), auto;" onclick="window.location.href = '/pc-website/index.html';">here</span></a>
+		<br><br><br><img src="/pc-website/img/oof.png" onclick="EGG();"></img>
 	</div>
-	<video id="wario" style="display: none; pointer-events: none;" src="/img/WARIOSHOWYOUFUN.mp4" />
+	<video id="wario" style="display: none; pointer-events: none;" src="/pc-website/img/WARIOSHOWYOUFUN.mp4" />
 	<script>
-	var audio = new Audio('/mario_doh.wav');
+	var audio = new Audio('/pc-website/mario_doh.wav');
 	var eggn = 0;
 	function EGG()
 	{
@@ -48,7 +48,7 @@
 			}
 			wario.play();
 			wario.onended = function() {
-				window.location.href = '/index.html';
+				window.location.href = '/pc-website/index.html';
 			}
 		}
 	}
