@@ -1,2 +1,2 @@
 # SM64 Port Website
-http://sm64pcport.tk
+https://team-refresh.github.io/pc-website
